@@ -1,13 +1,19 @@
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import Header from "./Components/Header";
+import Chat from "../src/pages/Chat";
+import Home from "./pages/Home";
 
 function App() {
   return (
     <div className="App">
-      {/* Header Section */}
-      <Header />
-      {/* Main Container */}
-      {/* Bottom Menu */}
+      <Home />
+      <Routes>
+        {/* <main>
+          <div className="mainContainer"></div>
+          <div className="rightMenu"></div>
+        </main> */}
+        <Route path="/chat" element={<Chat />} />
+      </Routes>
     </div>
   );
 }
